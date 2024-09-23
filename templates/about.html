@@ -1,0 +1,265 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="container-fluid about-container">
+  <h1 class="text-center mb-5">About StockWise</h1>
+
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="about-section mb-5">
+        <div class="section-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <p>
+          Welcome to the <strong>Stock Prediction System</strong>, an innovative
+          web application designed to predict stock prices using advanced
+          machine learning techniques. Our system leverages historical data and
+          sophisticated models to forecast future stock prices, providing
+          valuable insights to assist in making informed investment decisions.
+        </p>
+      </div>
+
+      <div class="about-section mb-5">
+        <h2 class="mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="24"
+            height="24"
+            class="inline-icon"
+          >
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"
+            />
+          </svg>
+          Key Features
+        </h2>
+        <ul class="feature-list">
+          <li>
+            <strong>Predict Future Prices</strong>: Utilize LSTM networks to
+            analyze historical stock data and predict future prices.
+          </li>
+          <li>
+            <strong>Data Integration</strong>: Fetch the latest stock data from
+            Yahoo Finance for up-to-date predictions.
+          </li>
+          <li>
+            <strong>Visualization</strong>: View graphs comparing actual stock
+            prices with predictions to assess model performance.
+          </li>
+          <li>
+            <strong>Model Management</strong>: Save and load trained models to
+            optimize the prediction process without retraining.
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-section mb-5">
+        <h2 class="mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="24"
+            height="24"
+            class="inline-icon"
+          >
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+            />
+          </svg>
+          How It Works
+        </h2>
+        <ol class="process-list">
+          <li>
+            <strong>Data Collection</strong>: Historical stock data is collected
+            from a CSV file or fetched from Yahoo Finance.
+          </li>
+          <li>
+            <strong>Model Training</strong>: If no model is available, the
+            system trains an LSTM model on the historical data.
+          </li>
+          <li>
+            <strong>Prediction</strong>: The trained model is used to predict
+            future stock prices based on recent data.
+          </li>
+          <li>
+            <strong>Visualization</strong>: The system generates and saves
+            visualizations of actual versus predicted stock prices.
+          </li>
+        </ol>
+      </div>
+
+      <div class="about-section mb-5">
+        <h2 class="mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="24"
+            height="24"
+            class="inline-icon"
+          >
+            <path
+              d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+            />
+          </svg>
+          Technologies Used
+        </h2>
+        <ul class="tech-list">
+          <li>
+            <strong>Flask</strong>: A Python web framework used to build the web
+            application.
+          </li>
+          <li>
+            <strong>TensorFlow/Keras</strong>: Libraries for building and
+            training the LSTM neural network model.
+          </li>
+          <li>
+            <strong>yfinance</strong>: A library to fetch historical stock data
+            from Yahoo Finance.
+          </li>
+          <li>
+            <strong>Matplotlib</strong>: A plotting library used to create
+            visualizations of stock predictions and training results.
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-section">
+        <h2 class="mb-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="24"
+            height="24"
+            class="inline-icon"
+          >
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            />
+          </svg>
+          Contact
+        </h2>
+        <p>
+          If you have any questions or feedback, feel free to reach out to us:
+        </p>
+        <p>
+          <strong>Email</strong>:
+          <a
+            href="mailto:mwangi.brian21@students.dkut.ke.ac"
+            class="contact-link"
+            >mwangi.brian21@students.dkut.ke.ac</a
+          >
+        </p>
+        <p>
+          <strong>GitHub</strong>:
+          <a
+            href="https://github.com/MwangangiBrian/Stockwise"
+            class="contact-link"
+            >MwangangiBrian</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h1 {
+    color: #000000;
+  }
+  .about-container {
+    padding: 5vh 10vw;
+    color: #ffffff;
+  }
+
+  .about-container h1 {
+    font-weight: 600;
+    font-size: 2.8em;
+    margin-bottom: 2rem;
+  }
+
+  .about-section {
+    background-color: #2e2e4f;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .about-section:hover {
+    transform: translateY(-5px);
+  }
+
+  .section-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .section-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: #e91e63;
+  }
+
+  h2 {
+    color: #e91e63;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+  }
+
+  .inline-icon {
+    margin-right: 0.5rem;
+  }
+
+  .feature-list,
+  .process-list,
+  .tech-list {
+    padding-left: 1.5rem;
+    list-style-type: none;
+  }
+
+  .feature-list li,
+  .process-list li,
+  .tech-list li {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .feature-list li::before,
+  .process-list li::before,
+  .tech-list li::before {
+    content: "•";
+    color: #e91e63;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+  }
+
+  .contact-link {
+    color: #e91e63;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: #ff4081;
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}

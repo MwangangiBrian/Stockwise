@@ -3,39 +3,76 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stock Market Prediction</title>
+    <title>Stockwise</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+  href="https://fonts.googleapis.com/css2?family=Flow+Circular&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e2f;
+      color: #000000;
+  }
+  .navbar {
+      background-color: #1e1e2f !important;
+      padding: 1rem 2rem;
+  }
+  .navbar-brand {
+      color: white !important;
+      font-weight: 600;
+  }
+  .nav-link {
+      color: #ffffff80 !important;
+  }
+  .nav-link:hover {
+      color: white !important;
+  }
+  .btn-get-in-touch {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      /* padding: 0.5rem 1rem; */
+      border-radius: 5px;
+  }
+  .btn-get-in-touch:hover {
+      background-color: #d81557;
+  }
+</style>
   </head>
-  <body style="background-image:linear-gradient(270deg,Azure,AliceBlue);">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-      <a class="navbar-brand" href="#">Stock Market Prediction</a>
+  <body style="background-color:#eae2b7;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">StockWise</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="/">News <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" id ="news-link">
+            <a class="nav-link " href="/news">News <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about"> About <span class="sr-only">(current)</span></a>
           </li>
         </ul>
         
       </div>
     </nav>
 
-    <div class="container-fluid" style="padding:10vh;">
-      <h2 style="text-align:center;font-weight:600;font-size:2.8em">Stock Market Prediction</h2>
-
-      {% block body %} {% endblock %}
-
-    </div>
+    {% block body %} {% endblock %}
+    
 
     <footer class="footer mt-auto py-3 fixed-bottom">
       <div class="container">
-       <center> <span class="text-muted">Stock Market Prediction &copy;2021</span><center>
+       <center> <span class="text-muted">StockWise</span><center>
       </div>
     </footer>
 
@@ -44,3 +81,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+
+

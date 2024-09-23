@@ -1,27 +1,79 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% block body %}
+<div class="container-fluid" style="padding: 5vh 10vw; color: #ffffff">
+  <h1
+    style="
+      text-align: center;
+      font-weight: 600;
+      font-size: 2.8em;
+      margin-bottom: 2rem;
+      color: #000000;
+    "
+  >
+    {{ stockName }}
+  </h1>
 
-{% block body %}
-  <div class="container-fluid" style="padding-top:2vh;padding-left:10vw;padding-right:10vw;">
-    <h2 style="text-align:center" >({{ stockName }})</h2>
-    <div class="container-fluid" style="padding-top:5vh;padding-left:2vw;padding-right:2vw;">
-      <div class="row">
-        <div class="col-6 col-sm col-md">
-          <img style="width:100%" src="/static/stocks/{{ stockName }}/{{ stockName }}1.png" alt="graph1">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <img
+        class="img-fluid"
+        src="/static/stocks/{{ stockName }}/{{ stockName }}1.png"
+        alt="graph1"
+      />
+    </div>
+    <div class="col-md-6 mb-4">
+      <img
+        class="img-fluid"
+        src="/static/stocks/{{ stockName }}/{{ stockName }}2.png"
+        alt="graph2"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="prediction-box">
+        <h3 class="text-center mb-4">Predicted Prices</h3>
+        <div class="prediction-item">
+          <span>Day 1:</span>
+          <span>${{ stockData[0] }}</span>
         </div>
-        <div class="col-6 col-sm col-md">
-          <img style="width:100%" src="/static/stocks/{{ stockName }}/{{ stockName }}2.png" alt="graph2">
+        <div class="prediction-item">
+          <span>Day 2:</span>
+          <span>${{ stockData[1] }}</span>
         </div>
-      </div>
-      <div class="row"></div>
-        <div class="col">
-          <p style="text-align:center;font-size:1.5rem">
-            Predicted Price: ${{ stockData[0] }}<br>
-            Accuracy of Prediction: {{ stockData[1] }}%
-          </p>
+        <div class="prediction-item">
+          <span>Day 3:</span>
+          <span>${{ stockData[2] }}</span>
+        </div>
+        <div class="prediction-item model-accuracy">
+          <span>Model Accuracy on historical data:</span>
+          <span>{{ stockData[-1] }}</span>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-
+<style>
+  .prediction-box {
+    background-color: #2e2e4f;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .prediction-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .model-accuracy {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #e91e63;
+  }
+  h3 {
+    color: #e91e63;
+  }
+</style>
 {% endblock %}

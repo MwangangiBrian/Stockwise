@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="/static/css/news.css" />
+<div class="container-fluid">
+  <div class="row justify-content-center my-4">
+    <div class="col-md-8">
+      <div class="container-fluid" style="padding: 10vh">
+        <h2
+          style="
+            text-align: center;
+            font-weight: 600;
+            font-size: 2.8em;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          News & Articles
+        </h2>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search News Here"
+          id="search-input"
+          class="form-control"
+        />
+        <button id="search-button" class="btn btn-get-in-touch ml-2">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="blog-container">
+    <!-- News articles will be dynamically inserted here -->
+  </div>
+</div>
+
+<script src="/static/js/news.js"></script>
+{% endblock %}

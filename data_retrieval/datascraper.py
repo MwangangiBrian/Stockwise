@@ -44,7 +44,7 @@ def get_data_from_yahoo(reload_sp500=False):
             print(f'Already have {ticker}')
 
 # Fetch and save S&P 500 tickers
-save_sp500_tickers()
+# save_sp500_tickers()
 
 # Get stock data from Yahoo Finance
-get_data_from_yahoo()
+# get_data_from_yahoo()
